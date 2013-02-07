@@ -1,0 +1,6 @@
+[submodule "test/chai"]
+	path = test/chai
+	url = git://github.com/chaijs/chai.git
+[submodule "test/requirejs"]
+	path = test/requirejs
+	url = git://github.com/jrburke/requirejs.git

@@ -1,0 +1,9 @@
+{
+  "framework": "mocha",
+  "src_files": [
+    "test/chai/chai.js",
+    "test/requirejs/require.js",
+    "md.js",
+    "test/test.js"
+  ]
+}

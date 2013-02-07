@@ -1,5 +1,5 @@
 /**
- * md.js - AMD Multiple Dependency Loader
+ * md.js v0.1.0 - AMD Multiple Dependency Loader
  * Copyright 2013 Kenneth Powers
  * Released under the MIT License
  */

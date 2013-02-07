@@ -1,3 +1,5 @@
+/*jshint expr:true*/
+/*global describe:true it:true before:true chai:true require:true console:true*/
 describe('md tests', function () {
   var expect;
 
@@ -30,6 +32,20 @@ describe('md tests', function () {
       require.config({
         baseUrl: '/test'
       });
+      done();
+    });
+  });
+
+  it('should load multiple dependencies with aliases', function (done) {
+    require(['../md!a:x;b:y;c:z'], function (md) {
+      console.log(md);
+      expect(md).to.be.array;
+      expect(md[0]).to.equal(md.x);
+      expect(md.x).to.equal('a');
+      expect(md[1]).to.equal(md.y);
+      expect(md.y).to.equal('b');
+      expect(md[2]).to.equal(md.z);
+      expect(md.z).to.equal('c');
       done();
     });
   });

@@ -17,4 +17,20 @@ describe('md tests', function () {
       done();
     });
   });
+
+  it('should load multiple dependencies with relative paths', function (done) {
+    require.config({
+      baseUrl: '/test/foo/bar'
+    });
+    require(['../../../md!../../a;../../b;../../c'], function (md) {
+      expect(md).to.be.array;
+      expect(md[0]).to.equal('a');
+      expect(md[1]).to.equal('b');
+      expect(md[2]).to.equal('c');
+      require.config({
+        baseUrl: '/test'
+      });
+      done();
+    });
+  });
 });

@@ -10,7 +10,7 @@ This is a loader plugin for AMD systems such as [RequireJS](http://requirejs.org
 
 You can also give modules aliases as such:
 
-    require(['md!firstModule:first;secondModule:first;text!./file.txt:text'], function (md) {
+    require(['md!firstModule:first;secondModule:second;text!./file.txt:text'], function (md) {
       // md is an array
       // md[0] is md.first is `firstModule`
       // md[1] is md.second is `secondModule`
